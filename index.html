@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="amazon_logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+  <title>Amazon Clone</title>
+</head>
+<body>
+
+    <header class="navbar">
+
+        <a href="amazon_logo.png" class="nav-logo">
+            <div class="logo-text">amazon<span>.in</span>
+            </div>
+
+            <div class="amazon-smile"></div>
+        </a>
+
+        <div class="nav-item location-box">
+            <i class="fa-solid fa-location-dot location-icon"></i>
+
+            <div>
+                <p class="small-text">Delivering to Surat 395007</p>
+                <p class="bold-text">Update location</p>
+            </div>
+        </div>
+
+        <form class="search-container" id="searchForm">
+
+            <select id="category">
+                <option value="All">All</option>
+                <option value="Mobiles">Mobiles</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Books">Books</option>
+                <option value="Home">Home</option>
+            </select>
+
+            <input type="text" id="searchInput" placeholder="Search Amazon.in" autocomplete="off" />
+
+            <button type="submit" class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </form>
+
+        <div class="nav-item language-box">
+            <span class="india-flag">🇮🇳</span>
+            <span class="bold-text">EN</span>
+            <i class="fa-solid fa-caret-down arrow"></i>
+        </div>
+
+        <div class="nav-item account-box">
+            <p class="small-text">Hello, sign in</p>
+
+            <p class="bold-text">
+                Account & Lists
+                <i class="fa-solid fa-caret-down arrow"></i>
+            </p>
+        </div>
+
+        <div class="nav-item orders-box">
+            <p class="small-text">Returns</p>
+            <p class="bold-text">& Orders</p>
+        </div>
+
+        <div class="nav-item cart-box">
+            <div class="cart-icon-box">
+
+                <span class="cart-count" id="cartCount">0</span>
+
+                <i class="fa-solid fa-cart-shopping cart-icon"></i>
+
+            </div>
+
+            <span class="bold-text cart-title">Cart</span>
+        </div>
+
+    </header>
+
+
+
+    <nav class="secondary-navbar">
+        <div class="search-result">
+</div>
+
+        <button class="all-menu" id="allMenuButton">
+            <i class="fa-solid fa-bars"></i>
+            <span>All</span>
+        </button>
+
+        <div class="nav-links">
+
+            <a href="#">Fresh</a>
+            <a href="#">MX Player</a>
+            <a href="#">Sell</a>
+            <a href="#">Bestsellers</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Mobiles</a>
+
+            <a href="#" class="prime-link">
+                Prime
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+
+            <a href="#">Amazon Pay</a>
+            <a href="#">Electronics</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Fashion</a>
+            <a href="#">Computers</a>
+
+        </div>
+
+    </nav>
+
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+
+        <div class="side-menu-header">
+            <h2>
+                <i class="fa-solid fa-user-circle"></i>
+                Hello, Sign in
+            </h2>
+
+            <button id="closeMenuButton">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        
+
+        <div class="side-menu-content">
+
+            <h3>Trending</h3>
+
+            <a href="#">Best Sellers</a>
+            <a href="#">New Releases</a>
+            <a href="#">Movers and Shakers</a>
+
+            <hr />
+
+            <h3>Shop by Category</h3>
+
+            <a href="#">Mobiles</a>
+            <a href="#">Electronics</a>
+            <a href="#">Fashion</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Computers</a>
+
+        </div>
+
+    </aside>
+
+
+
+    <main class="hero-section">
+
+        <div class="slider">
+
+            <div class="slides">
+
+                <img src="hero_image.jpg" class="slide active" alt="Amazon offer banner" />
+
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/pc_unrec_may25_refresh._CB761742379_.jpg" class="slide" alt="Amazon mobile accessories banner" />
+
+
+            </div>
+
+            <div class="hero-gradient"></div>
+
+            <button class="slider-button previous" id="previousButton">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button class="slider-button next" id="nextButton">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+
+
+        <section class="product-section">
+
+
+            <article class="product-card">
+
+                <h2>
+                    Appliances for your home | Up to 55% off
+                </h2>
+
+                <div class="product-grid">
+
+                    <div class="product-item">
+                        <img src="box1_image.jpg" alt="Air conditioner" />
+                        <p>Cloth</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box2_image.jpg" alt="Refrigerator" />
+                        <p>Air conditioner</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box3_image.jpg" alt="Washing machine" />
+                        <p>Chire</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box4_image.jpg" alt="Microwave" />
+                        <p>Phone</p>
+                    </div>
+
+                </div>
+
+                <a href="#" class="card-link">See more</a>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <h2>Revamp your home in style</h2>
+
+                <div class="product-grid">
+
+                    <div class="product-item">
+                        <img src="box5_image.jpg" alt="Bedsheet" />
+                        <p>Cushion covers, bedsheets & more</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box6_image.jpg" alt="Home decoration" />
+                        <p>Figurines, vases & more</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box7_image.jpg" alt="Curtains" />
+                        <p>Home storage</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box8_image.jpg" alt="Lighting" />
+                        <p>Lighting solutions</p>
+                    </div>
+
+                </div>
+
+                <a href="#" class="card-link">Explore all</a>
+
+            </article>
+
+            <article class="product-card">
+
+                <h2>Starting ₹49 | Deals on home essentials</h2>
+
+                <div class="product-grid">
+
+                    <div class="product-item">
+                        <img src="box1_image.jpg" alt="Cleaning supplies" />
+                        <p>Cleaning supplies</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box2_image.jpg" alt="Bathroom accessories" />
+                        <p>Bathroom accessories</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box3_image.jpg" alt="Kitchen accessories" />
+                        <p>Kitchen accessories</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="box4_image.jpg" alt="Home decor" />
+                        <p>Home decor</p>
+                    </div>
+
+                </div>
+
+                <a href="#" class="card-link">See all deals</a>
+
+            </article>
+
+
+            <article class="product-card headphone-card">
+
+                <h2>Up to 75% off | Deals on headphones</h2>
+
+                <div class="headphone-images">
+
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQnNzWrDom5juY50j7xa9kepH5DbhPBl6gYh0gVRwIkl3_fpyk-_ZCmxWLijPIMnV2lYZIgb_wSDikVyXfYhMT5ADjqXsBd_Pk3XRIRjccuUFbtu1iI9kgo5Q" alt="Wireless headphones" />
+
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzetbe_C5nb-KG_iOL72amWZPkfx7HTVcmzUdulHwazq2z0b4gCHCYulg1eQe_2VFg5ZAzXmja8nA4HpLPAy5m9GZzwtzdE5nRfjx4q-9kIVlO1J9uyxh_-w" alt="Bluetooth headphones" />
+
+                </div>
+
+                <a href="#" class="card-link">See all offers</a>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="amazon-footer">
+
+  <button class="back-to-top" id="backToTop">
+    Back to top
+  </button>
+
+  <div class="footer-main">
+
+    <div class="footer-column">
+      <h3>Get to Know Us</h3>
+
+      <a href="#">About Amazon</a>
+      <a href="#">Careers</a>
+      <a href="#">Press Releases</a>
+      <a href="#">Amazon Science</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Connect with Us</h3>
+
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Make Money with Us</h3>
+
+      <a href="#">Sell on Amazon</a>
+      <a href="#">Sell under Amazon Accelerator</a>
+      <a href="#">Protect and Build Your Brand</a>
+      <a href="#">Amazon Global Selling</a>
+      <a href="#">Supply to Amazon</a>
+      <a href="#">Become an Affiliate</a>
+      <a href="#">Fulfilment by Amazon</a>
+      <a href="#">Advertise Your Products</a>
+      <a href="#">Amazon Pay on Merchants</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Let Us Help You</h3>
+
+      <a href="#">Your Account</a>
+      <a href="#">Returns Centre</a>
+      <a href="#">Recalls and Product Safety Alerts</a>
+      <a href="#">100% Purchase Protection</a>
+      <a href="#">Amazon App Download</a>
+      <a href="#">Help</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <a href="#" class="footer-logo">
+      <span class="footer-logo-text">amazon</span>
+      <span class="footer-logo-in">.in</span>
+      <span class="footer-smile"></span>
+    </a>
+
+    <div class="footer-settings">
+
+      <button class="footer-setting-btn">
+        <i class="fa-solid fa-globe"></i>
+        <span>English</span>
+        <i class="fa-solid fa-sort"></i>
+      </button>
+
+      <button class="footer-setting-btn">
+        <span class="footer-flag">🇮🇳</span>
+        <span>India</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
